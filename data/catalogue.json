@@ -1,0 +1,1759 @@
+{
+  "title": "Environmental Microbiology Visualization Atlas",
+  "reviewed_on": "2026-10-27",
+  "scope": "Curated visualization formats and applied recipes; not an exhaustive systematic literature review or a claim that every format appeared in the cited journals.",
+  "evidence_definitions": {
+    "direct": "The cited figure or method explicitly uses the encoding. Proposed application and design advice may extend the example.",
+    "adaptation": "The source motivates the application or related visual structure; this exact recipe is a proposed adaptation.",
+    "proposal": "Additional useful format proposed for the project; no inspected journal example is claimed."
+  },
+  "entries": [
+    {
+      "id": "GEO01",
+      "family": "Study design and geography",
+      "name": "Sampling-location map",
+      "question": "Where were communities sampled?",
+      "minimum_data": "Coordinates, site IDs, habitat and sampling effort",
+      "design_tip": "Quiet basemap, meaningful locator inset, stable habitat colours",
+      "interpretation_limit": "Projection and symbol area matter; sampling density is not biodiversity",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R01",
+          "locator": "Fig. 1b"
+        },
+        {
+          "id": "R02",
+          "locator": "Fig. 1a"
+        },
+        {
+          "id": "R13",
+          "locator": "Fig. 1a"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "GEO02",
+      "family": "Study design and geography",
+      "name": "Environmental raster with sampling overlay",
+      "question": "Which gradients does the design cover?",
+      "minimum_data": "Georeferenced environmental raster and sample coordinates",
+      "design_tip": "Light continuous background with legible site markers",
+      "interpretation_limit": "Match raster date, spatial resolution and coordinate system to sampling",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "GEO03",
+      "family": "Study design and geography",
+      "name": "Predicted-distribution map with uncertainty companion",
+      "question": "Where is a taxon, function or diversity metric predicted?",
+      "minimum_data": "Fitted spatial predictions, uncertainty and training locations",
+      "design_tip": "Aligned prediction and uncertainty maps with shared geography",
+      "interpretation_limit": "Extrapolation and spatial validation must be visible; predictions are not measurements",
+      "evidence_status": "adaptation",
+      "references": [
+        {
+          "id": "R14",
+          "locator": "Global diversity prediction application"
+        }
+      ],
+      "priority": "specialist"
+    },
+    {
+      "id": "GEO04",
+      "family": "Study design and geography",
+      "name": "Faceted geographic maps",
+      "question": "How do seasons, depths or taxa differ geographically?",
+      "minimum_data": "Comparable mapped values for several groups",
+      "design_tip": "Reuse extent, projection and scale across small multiples",
+      "interpretation_limit": "Separate colour limits can manufacture apparent differences",
+      "evidence_status": "adaptation",
+      "references": [
+        {
+          "id": "R03",
+          "locator": "Fig. 7 geographic comparisons"
+        }
+      ],
+      "priority": "specialist"
+    },
+    {
+      "id": "GEO05",
+      "family": "Study design and geography",
+      "name": "Depth or transect profile",
+      "question": "How does abundance change through sediment, soil or water?",
+      "minimum_data": "Depth or distance, observations, units and replicate IDs",
+      "design_tip": "Put depth downward; align microbial and chemical profiles",
+      "interpretation_limit": "Do not connect unrelated sites as a continuous trajectory",
+      "evidence_status": "adaptation",
+      "references": [
+        {
+          "id": "R03",
+          "locator": "Fig. 7 depth gradients"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "GEO06",
+      "family": "Study design and geography",
+      "name": "Distance–depth section or contour map",
+      "question": "Where are subsurface hotspots along a transect?",
+      "minimum_data": "Spatially resolved depth profiles and sampling support",
+      "design_tip": "Overlay measured positions on the section",
+      "interpretation_limit": "Smooth interpolation can imply unsupported structures between sparse samples",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "GEO07",
+      "family": "Study design and geography",
+      "name": "Experimental-design schematic",
+      "question": "How are sites, treatments and repeated samples related?",
+      "minimum_data": "Actual allocation, hierarchy and sampling schedule",
+      "design_tip": "Show nesting and replication using concise labels",
+      "interpretation_limit": "Diagram geometry does not encode sample quantity unless explicitly defined",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R08",
+          "locator": "Fig. 1"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "GEO08",
+      "family": "Study design and geography",
+      "name": "Analysis-dependency workflow",
+      "question": "Which measurements support each result?",
+      "minimum_data": "Real input, transformation and output dependencies",
+      "design_tip": "Use compact branching paths and consistent data glyphs",
+      "interpretation_limit": "Arrows must mean dependencies; distinguish experimental and computational steps",
+      "evidence_status": "adaptation",
+      "references": [
+        {
+          "id": "R12",
+          "locator": "Fig. 1 method schematic"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "DIV01",
+      "family": "Sampling, diversity and distributions",
+      "name": "Boxplot with observations",
+      "question": "How does alpha diversity vary among habitats?",
+      "minimum_data": "Per-sample metric, group and biological replicate",
+      "design_tip": "Overlay restrained raw points and show group sample sizes",
+      "interpretation_limit": "Define whiskers; many technical replicates do not increase biological n",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R06",
+          "locator": "Fig. 1b"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "DIV02",
+      "family": "Sampling, diversity and distributions",
+      "name": "Violin or bean plot",
+      "question": "Are distributions skewed or multimodal?",
+      "minimum_data": "Enough independent observations per group",
+      "design_tip": "Align density shapes and add median and observations",
+      "interpretation_limit": "Kernel bandwidth can invent apparent modes in small samples",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R02",
+          "locator": "Fig. 4b and Fig. 8b"
+        }
+      ],
+      "priority": "specialist"
+    },
+    {
+      "id": "DIV03",
+      "family": "Sampling, diversity and distributions",
+      "name": "Raincloud plot",
+      "question": "How do distribution, observations and central tendency agree?",
+      "minimum_data": "Per-unit values and group IDs",
+      "design_tip": "Combine half-density, points and a compact interval summary",
+      "interpretation_limit": "Density is unreliable with very small n; specify the interval meaning",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "M04",
+          "locator": "Method examples"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "DIV04",
+      "family": "Sampling, diversity and distributions",
+      "name": "Ridgeline distributions",
+      "question": "How do distributions shift across many ordered groups?",
+      "minimum_data": "Repeated comparable measurements and an ordered grouping",
+      "design_tip": "Use a common axis and modest overlap",
+      "interpretation_limit": "Per-ridge normalization hides differences in sample quantity",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "DIV05",
+      "family": "Sampling, diversity and distributions",
+      "name": "Empirical cumulative distribution function",
+      "question": "What fraction of samples lies below a threshold?",
+      "minimum_data": "Individual values, including eligible zeros",
+      "design_tip": "Label selected thresholds and use direct group labels",
+      "interpretation_limit": "Distinguish censoring and missing data from measured zeros",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R13",
+          "locator": "Fig. 3a"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "DIV06",
+      "family": "Sampling, diversity and distributions",
+      "name": "Histogram or density overlay",
+      "question": "What is the size or spread of a measurement?",
+      "minimum_data": "Contig lengths, cell sizes or other per-unit values",
+      "design_tip": "Use common bins and a clear log scale when needed",
+      "interpretation_limit": "Conclusions should not depend on a convenient bin width",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R03",
+          "locator": "Fig. 1b"
+        }
+      ],
+      "priority": "specialist"
+    },
+    {
+      "id": "DIV07",
+      "family": "Sampling, diversity and distributions",
+      "name": "Rank-abundance curve",
+      "question": "Is a community dominated by a few populations?",
+      "minimum_data": "Comparable abundance estimates and taxon ranks",
+      "design_tip": "Emphasize dominance and tail shape with consistent axes",
+      "interpretation_limit": "Relative and absolute abundance answer different questions",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R08",
+          "locator": "Fig. 3"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "DIV08",
+      "family": "Sampling, diversity and distributions",
+      "name": "Rarefaction or accumulation curve",
+      "question": "How much additional diversity does sampling reveal?",
+      "minimum_data": "Count data or discovery histories, effort and resampling results",
+      "design_tip": "Show observed effort, uncertainty and any extrapolation boundary",
+      "interpretation_limit": "Distinguish sample-based from read-based effort; do not equate saturation with complete sampling",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R02",
+          "locator": "Fig. 1c"
+        },
+        {
+          "id": "R13",
+          "locator": "Extended Data Fig. 1"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "DIV09",
+      "family": "Sampling, diversity and distributions",
+      "name": "Hill-diversity profile",
+      "question": "Do group rankings depend on sensitivity to rare taxa?",
+      "minimum_data": "Diversity estimates across orders q with uncertainty",
+      "design_tip": "Plot effective diversity on shared axes across q",
+      "interpretation_limit": "Richness, Shannon-derived and Simpson-derived measures need compatible estimation",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "COM01",
+      "family": "Composition, occurrence and set membership",
+      "name": "Ordered stacked abundance bars",
+      "question": "Which dominant taxa or functions characterize samples?",
+      "minimum_data": "Taxon-by-sample abundance with a defined denominator",
+      "design_tip": "Keep category order stable and aggregate the long tail transparently",
+      "interpretation_limit": "Relative increases need not mean absolute growth; middle segments are hard to compare",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R02",
+          "locator": "Fig. 8a"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "COM02",
+      "family": "Composition, occurrence and set membership",
+      "name": "Annotated abundance heatmap",
+      "question": "Which taxa covary across environmental groups?",
+      "minimum_data": "Transformed feature matrix, sample metadata and declared ordering",
+      "design_tip": "Add compact metadata tracks and a legible continuous scale",
+      "interpretation_limit": "Row z-scores erase between-taxon abundance differences; zeros need explicit handling",
+      "evidence_status": "adaptation",
+      "references": [
+        {
+          "id": "M02",
+          "locator": "Parallel annotated matrices"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "COM03",
+      "family": "Composition, occurrence and set membership",
+      "name": "Abundance–prevalence dot matrix",
+      "question": "Which taxa are abundant and consistently detected?",
+      "minimum_data": "Group-level abundance and detection fraction from sample-level data",
+      "design_tip": "Use dot area for prevalence and colour for abundance",
+      "interpretation_limit": "Area must encode magnitude; disclose aggregation and detection thresholds",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "starter"
+    },
+    {
+      "id": "COM04",
+      "family": "Composition, occurrence and set membership",
+      "name": "Ordered presence–absence matrix",
+      "question": "Are communities nested or characterized by turnover?",
+      "minimum_data": "Binary occurrence matrix and detection definition",
+      "design_tip": "Order rows and columns by a justified ecological criterion",
+      "interpretation_limit": "Non-detection is not proof of absence; ordering affects apparent nestedness",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R01",
+          "locator": "Fig. 3a–b"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "COM05",
+      "family": "Composition, occurrence and set membership",
+      "name": "Ternary composition plot",
+      "question": "How do samples divide among three components?",
+      "minimum_data": "Three mutually exclusive components summing to a common whole",
+      "design_tip": "Use readable corner labels and restrained reference lines",
+      "interpretation_limit": "Other components cannot disappear silently; closure induces dependence",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "COM06",
+      "family": "Composition, occurrence and set membership",
+      "name": "Taxonomic treemap",
+      "question": "How is abundance distributed within a hierarchy?",
+      "minimum_data": "Consistent taxonomy and nested totals",
+      "design_tip": "Limit hierarchy depth and label major regions",
+      "interpretation_limit": "Area is weak for precise comparisons; parent and child totals must reconcile",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "COM07",
+      "family": "Composition, occurrence and set membership",
+      "name": "Taxonomic sunburst or icicle plot",
+      "question": "How do broad groups subdivide into finer taxa?",
+      "minimum_data": "A genuine taxonomy with counts at leaves",
+      "design_tip": "Prefer an interactive drill-down with an accessible tabular counterpart",
+      "interpretation_limit": "Equal-looking sectors can be hard to compare; distinguish taxonomy from phylogeny",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "COM08",
+      "family": "Composition, occurrence and set membership",
+      "name": "UpSet intersection plot",
+      "question": "Which genes or taxa are shared among many groups?",
+      "minimum_data": "Explicit sets with unique entity IDs",
+      "design_tip": "Align the membership matrix with intersection and set sizes",
+      "interpretation_limit": "Specify exclusive versus inclusive intersections and account for filtered entities",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "M01",
+          "locator": "Method examples"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "COM09",
+      "family": "Composition, occurrence and set membership",
+      "name": "Venn or Euler diagram",
+      "question": "Which members are shared among two or three small sets?",
+      "minimum_data": "Set memberships and intersection counts",
+      "design_tip": "Use a few labelled sets; prioritize numbers over decorative areas",
+      "interpretation_limit": "More than a few sets becomes unreadable; area proportionality is not automatic",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R03",
+          "locator": "Fig. 6a (larger-set Venn; simpler use recommended here)"
+        }
+      ],
+      "priority": "specialist"
+    },
+    {
+      "id": "COM10",
+      "family": "Composition, occurrence and set membership",
+      "name": "Membership alluvial diagram",
+      "question": "How do classifications or memberships connect across levels?",
+      "minimum_data": "Entity-level links with counts or weights",
+      "design_tip": "Minimize crossings and define ribbon width",
+      "interpretation_limit": "This represents membership, not necessarily temporal movement or conserved material",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "ORD01",
+      "family": "Ordination and environmental gradients",
+      "name": "PCoA or NMDS sample ordination",
+      "question": "Which communities are compositionally similar?",
+      "minimum_data": "A justified distance matrix and ordination coordinates",
+      "design_tip": "Use equal geometric scaling and stable habitat symbols",
+      "interpretation_limit": "Label PCoA variance or NMDS stress appropriately; group separation alone is not a test",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R03",
+          "locator": "Fig. 4a PCoA"
+        },
+        {
+          "id": "R04",
+          "locator": "Extended Data Fig. 5i–l NMDS"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "ORD02",
+      "family": "Ordination and environmental gradients",
+      "name": "PCA biplot",
+      "question": "Which measured variables explain sample variation?",
+      "minimum_data": "Appropriately transformed continuous matrix and loadings",
+      "design_tip": "Show only interpretable loading vectors with the scaling stated",
+      "interpretation_limit": "PCA on untransformed relative abundance can be misleading",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "ORD03",
+      "family": "Ordination and environmental gradients",
+      "name": "Constrained ordination or environmental-vector overlay",
+      "question": "How does community structure relate to measured gradients?",
+      "minimum_data": "RDA/CCA/dbRDA scores or fitted vectors on an ordination",
+      "design_tip": "Reduce overlapping arrows and show the chosen scaling",
+      "interpretation_limit": "A constrained analysis differs from post-hoc vector fitting; neither establishes causation",
+      "evidence_status": "adaptation",
+      "references": [
+        {
+          "id": "R04",
+          "locator": "Extended Data Fig. 5i–l verifies the vector-overlay variant"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "ORD04",
+      "family": "Ordination and environmental gradients",
+      "name": "Chronological ordination trajectory",
+      "question": "How does a community move after a disturbance?",
+      "minimum_data": "One shared ordination, timestamps and replicate IDs",
+      "design_tip": "Connect observations within each real time series only",
+      "interpretation_limit": "Axis drift across separately fitted ordinations invalidates apparent trajectories",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "starter"
+    },
+    {
+      "id": "ORD05",
+      "family": "Ordination and environmental gradients",
+      "name": "Procrustes comparison",
+      "question": "Do two community representations preserve similar structure?",
+      "minimum_data": "Matched sample IDs and two coordinate configurations",
+      "design_tip": "Connect paired points and summarize residual mismatch",
+      "interpretation_limit": "Specify alignment and permutation design; low residuals do not imply identical biology",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R01",
+          "locator": "Extended Data Fig. 3b"
+        }
+      ],
+      "priority": "specialist"
+    },
+    {
+      "id": "ORD06",
+      "family": "Ordination and environmental gradients",
+      "name": "Distance-decay display",
+      "question": "Does community dissimilarity rise with geographic or environmental distance?",
+      "minimum_data": "Pairwise distances and identities of the underlying samples",
+      "design_tip": "Show data density or distance-bin distributions with a justified fit",
+      "interpretation_limit": "Pairwise comparisons share samples and are not independent replicates",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R02",
+          "locator": "Fig. 4b"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "ORD07",
+      "family": "Ordination and environmental gradients",
+      "name": "Joint scatterplot with marginal distributions",
+      "question": "How do macrodiversity and microdiversity vary together?",
+      "minimum_data": "Two per-sample metrics and group labels",
+      "design_tip": "Align marginal distributions with the central scatter axes",
+      "interpretation_limit": "Aggregated group relationships can differ from sample-level relationships",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R03",
+          "locator": "Fig. 4b"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "EFF01",
+      "family": "Effects, differential abundance and associations",
+      "name": "Forest or coefficient interval plot",
+      "question": "How large and uncertain are treatment effects?",
+      "minimum_data": "Effect estimates, intervals, units and reference groups",
+      "design_tip": "Align estimates to a meaningful null line and order scientifically",
+      "interpretation_limit": "State the model and interval type; effect estimates must respect the study design",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "starter"
+    },
+    {
+      "id": "EFF02",
+      "family": "Effects, differential abundance and associations",
+      "name": "Volcano plot",
+      "question": "Which features show substantial and supported changes?",
+      "minimum_data": "Valid effect sizes and adjusted significance values",
+      "design_tip": "Label a small, pre-specified subset and disclose thresholds",
+      "interpretation_limit": "A visually extreme point may have unstable low counts; use composition-aware inference where needed",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "EFF03",
+      "family": "Effects, differential abundance and associations",
+      "name": "MA or mean–difference plot",
+      "question": "Does apparent change depend on feature abundance?",
+      "minimum_data": "Mean abundance and estimated between-group change",
+      "design_tip": "Use density shading for crowds and highlight robust features",
+      "interpretation_limit": "State the transformation; pseudocounts can dominate rare-feature effects",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "EFF04",
+      "family": "Effects, differential abundance and associations",
+      "name": "Paired slope or dumbbell plot",
+      "question": "Do the same samples or sites change under treatment?",
+      "minimum_data": "Paired observations and stable pair IDs",
+      "design_tip": "Keep pair connections light and emphasize a summary only if useful",
+      "interpretation_limit": "Pairing cannot be inferred from two unrelated groups",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "starter"
+    },
+    {
+      "id": "EFF05",
+      "family": "Effects, differential abundance and associations",
+      "name": "Modelled response curve with uncertainty",
+      "question": "Is a response linear, saturating or unimodal?",
+      "minimum_data": "Raw observations, model predictions and uncertainty",
+      "design_tip": "Keep observations visible and show the sampled predictor range",
+      "interpretation_limit": "Smooth curves are model outputs; avoid unsupported extrapolation",
+      "evidence_status": "adaptation",
+      "references": [
+        {
+          "id": "R04",
+          "locator": "Fig. 1 verifies fitted diversity–latitude curves"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "EFF06",
+      "family": "Effects, differential abundance and associations",
+      "name": "Interaction or reaction-norm plot",
+      "question": "Does a treatment effect depend on an environmental context?",
+      "minimum_data": "Factorial or longitudinal estimates with appropriate uncertainty",
+      "design_tip": "Use shared axes and a concise line-style key",
+      "interpretation_limit": "Interactions need estimable contrasts and sufficient replication",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "EFF07",
+      "family": "Effects, differential abundance and associations",
+      "name": "Correlation heatmap or correlogram",
+      "question": "Which environmental measurements covary?",
+      "minimum_data": "Pairwise association estimates and sample availability",
+      "design_tip": "Use a diverging scale centered on zero and meaningful ordering",
+      "interpretation_limit": "Correlation is not causation; composition, multiple testing and repeated observations matter",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R04",
+          "locator": "Fig. 2a"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "EFF08",
+      "family": "Effects, differential abundance and associations",
+      "name": "Environmental association matrix with linked edges",
+      "question": "Which community summaries associate with environmental variables?",
+      "minimum_data": "Environmental correlations and justified community-distance association estimates",
+      "design_tip": "Combine a compact matrix with a small number of clearly keyed links",
+      "interpretation_limit": "Partial Mantel-style displays are not universal causal or confounder-control solutions",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R02",
+          "locator": "Fig. 5b"
+        }
+      ],
+      "priority": "specialist"
+    },
+    {
+      "id": "TIM01",
+      "family": "Time series and disturbance dynamics",
+      "name": "Aligned abundance and environment time series",
+      "question": "Do community changes coincide with environmental events?",
+      "minimum_data": "Time-stamped measurements with replicate identities",
+      "design_tip": "Align time axes; show raw observations alongside any smoothing",
+      "interpretation_limit": "Do not interpolate long gaps or confuse temporal association with a mechanism",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R10",
+          "locator": "Fig. 2 and Fig. 3a–b"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "TIM02",
+      "family": "Time series and disturbance dynamics",
+      "name": "Time-ordered taxon heatmap",
+      "question": "Which taxa bloom or disappear together?",
+      "minimum_data": "Taxon-by-time matrix and sampling intervals",
+      "design_tip": "Preserve chronology and add event or chemistry tracks",
+      "interpretation_limit": "Row scaling and uneven intervals can exaggerate apparent synchrony",
+      "evidence_status": "adaptation",
+      "references": [
+        {
+          "id": "R10",
+          "locator": "Fig. 1 and Fig. 3 temporal structure"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "TIM03",
+      "family": "Time series and disturbance dynamics",
+      "name": "Stacked-area succession plot",
+      "question": "How does overall composition change over time?",
+      "minimum_data": "Comparable relative or absolute abundances through time",
+      "design_tip": "Use stable taxon order and directly label dominant components",
+      "interpretation_limit": "Interpolation implies continuity; changing relative areas need not reflect biomass changes",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "TIM04",
+      "family": "Time series and disturbance dynamics",
+      "name": "Time–depth heatmap or Hovmöller diagram",
+      "question": "When do microbial or chemical layers shift?",
+      "minimum_data": "Repeated depth profiles with timestamps",
+      "design_tip": "Overlay measured sampling support and align related variables",
+      "interpretation_limit": "Sparse sampling does not support smooth migrating fronts without a model",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "TIM05",
+      "family": "Time series and disturbance dynamics",
+      "name": "Lagged association correlogram",
+      "question": "Does one process tend to precede another?",
+      "minimum_data": "Sufficiently long aligned time series and lag estimates",
+      "design_tip": "Plot signed lag with uncertainty or null-reference bands",
+      "interpretation_limit": "Autocorrelation, uneven sampling and shared drivers can generate false lead–lag patterns",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "TIM06",
+      "family": "Time series and disturbance dynamics",
+      "name": "Wavelet or time–frequency spectrum",
+      "question": "Does periodicity vary during a bloom or season?",
+      "minimum_data": "A sufficiently resolved time series and a wavelet analysis",
+      "design_tip": "Label periods and the cone of influence clearly",
+      "interpretation_limit": "Edge effects and temporal resolution constrain interpretable cycles",
+      "evidence_status": "adaptation",
+      "references": [
+        {
+          "id": "R10",
+          "locator": "Wavelet-based analysis; proposed spectrum display"
+        }
+      ],
+      "priority": "specialist"
+    },
+    {
+      "id": "TIM07",
+      "family": "Time series and disturbance dynamics",
+      "name": "Disturbance–recovery trajectory",
+      "question": "How resistant and resilient are communities?",
+      "minimum_data": "Before/during/after measurements, controls and a defined reference state",
+      "design_tip": "Align the perturbation window and show replicate paths",
+      "interpretation_limit": "Return in one metric does not prove complete ecological recovery",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "starter"
+    },
+    {
+      "id": "PHY01",
+      "family": "Taxonomy, phylogeny and evolution",
+      "name": "Rectangular annotated phylogram",
+      "question": "Which evolutionary relationships support a focal claim?",
+      "minimum_data": "Inferred tree, branch lengths, support and tip metadata",
+      "design_tip": "Use aligned tip labels and concise trait strips",
+      "interpretation_limit": "A dendrogram is not a phylogeny; state rooting and support conventions",
+      "evidence_status": "adaptation",
+      "references": [
+        {
+          "id": "R07",
+          "locator": "Fig. 1 overview tree; proposed rectangular detail view"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "PHY02",
+      "family": "Taxonomy, phylogeny and evolution",
+      "name": "Circular phylogeny with metadata rings",
+      "question": "How do habitat, novelty and traits vary across a large tree?",
+      "minimum_data": "Tree plus metadata joined by stable tip IDs",
+      "design_tip": "Keep rings aligned and label only readable clade levels",
+      "interpretation_limit": "Circular layout must preserve tree meaning; too many rings obscure both data and labels",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R06",
+          "locator": "Fig. 3a"
+        },
+        {
+          "id": "R13",
+          "locator": "Fig. 3b"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "PHY03",
+      "family": "Taxonomy, phylogeny and evolution",
+      "name": "Phylogeny linked to a heatmap",
+      "question": "Which functional repertoires follow evolutionary structure?",
+      "minimum_data": "Tree and feature matrix with matched identifiers",
+      "design_tip": "Reuse the exact tip order and align matrix rows to tips",
+      "interpretation_limit": "Different missing-data mechanisms must not be rendered as absence",
+      "evidence_status": "adaptation",
+      "references": [
+        {
+          "id": "R06",
+          "locator": "Fig. 3a linked metadata concept"
+        },
+        {
+          "id": "R09",
+          "locator": "Extended Data Fig. 7"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "PHY04",
+      "family": "Taxonomy, phylogeny and evolution",
+      "name": "Collapsed-clade phylogenetic overview",
+      "question": "Which major lineages expand an environmental catalogue?",
+      "minimum_data": "Tree and explicit clade-collapse rules",
+      "design_tip": "Pair overview wedges with a separate readable focal subtree",
+      "interpretation_limit": "Wedge area is not species richness unless encoded and declared",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R08",
+          "locator": "Fig. 2"
+        }
+      ],
+      "priority": "specialist"
+    },
+    {
+      "id": "PHY05",
+      "family": "Taxonomy, phylogeny and evolution",
+      "name": "Tanglegram or cophylogeny display",
+      "question": "Are host and symbiont evolutionary patterns concordant?",
+      "minimum_data": "Two independently inferred trees and supported links",
+      "design_tip": "Optimize leaf order without changing topology",
+      "interpretation_limit": "Crossings alone do not demonstrate host switching or coevolution",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "PHY06",
+      "family": "Taxonomy, phylogeny and evolution",
+      "name": "Ancestral-state or evolutionary-placement tree",
+      "question": "Where are traits or environmental sequences inferred to occur?",
+      "minimum_data": "Tree with state probabilities or placement likelihoods",
+      "design_tip": "Encode uncertainty and retain ambiguous placements",
+      "interpretation_limit": "Reconstructed states and placements are model-dependent, not directly observed ancestors",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "GEN01",
+      "family": "Comparative and population genomics",
+      "name": "Linear genome annotation tracks",
+      "question": "What is the organization of a focal genome region?",
+      "minimum_data": "Coordinates, gene annotations, strand and coverage",
+      "design_tip": "Share genomic coordinates across gene, coverage and GC tracks",
+      "interpretation_limit": "Assemblies and annotations have uncertainty; coordinate conventions must match",
+      "evidence_status": "adaptation",
+      "references": [
+        {
+          "id": "R09",
+          "locator": "Extended Data Fig. 7b"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "GEN02",
+      "family": "Comparative and population genomics",
+      "name": "Synteny ribbon plot",
+      "question": "Which gene blocks are conserved or rearranged?",
+      "minimum_data": "Homologous regions, alignments and genome coordinates",
+      "design_tip": "Use consistent gene colours and restrained identity ribbons",
+      "interpretation_limit": "Reverse complements and alignment filtering change apparent rearrangements",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R05",
+          "locator": "Fig. 3e sequence-context comparison"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "GEN03",
+      "family": "Comparative and population genomics",
+      "name": "Circular genome or Circos track plot",
+      "question": "How do features and long-range links span a genome?",
+      "minimum_data": "Genomic coordinates, quantitative tracks and supported links",
+      "design_tip": "Reserve the centre for a small number of interpretable links",
+      "interpretation_limit": "Circular artwork is not evidence that an assembled contig is circular",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "GEN04",
+      "family": "Comparative and population genomics",
+      "name": "Pangenome presence–absence matrix",
+      "question": "Which gene families are core or accessory across genomes?",
+      "minimum_data": "Gene-family membership and genome-quality metadata",
+      "design_tip": "Link annotation tracks to a stable genome order",
+      "interpretation_limit": "Missing genes in incomplete MAGs are not reliable biological absences",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "starter"
+    },
+    {
+      "id": "GEN05",
+      "family": "Comparative and population genomics",
+      "name": "Genome similarity matrix",
+      "question": "Which genomes form closely related groups?",
+      "minimum_data": "ANI or other similarity plus alignment coverage",
+      "design_tip": "Show a common ordering and make uncomputed cells distinct",
+      "interpretation_limit": "High identity over a short aligned fraction does not establish whole-genome similarity",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "GEN06",
+      "family": "Comparative and population genomics",
+      "name": "Biosynthetic gene-cluster architecture",
+      "question": "How do domains and gene modules form a biosynthetic system?",
+      "minimum_data": "BGC boundaries, gene/domain calls and coordinates",
+      "design_tip": "Group repeated modules and label mechanistically important domains",
+      "interpretation_limit": "Predicted biosynthetic potential does not establish product chemistry or expression",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R06",
+          "locator": "Fig. 4b"
+        }
+      ],
+      "priority": "specialist"
+    },
+    {
+      "id": "GEN07",
+      "family": "Comparative and population genomics",
+      "name": "Read-recruitment or coverage–identity plot",
+      "question": "Do reads support discrete populations or contaminants?",
+      "minimum_data": "Read positions, mapping identity and alignment filters",
+      "design_tip": "Align identity/coverage patterns to a reference genome",
+      "interpretation_limit": "Multi-mapping and coverage thresholds affect apparent population boundaries",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R03",
+          "locator": "Fig. 2a"
+        }
+      ],
+      "priority": "specialist"
+    },
+    {
+      "id": "GEN08",
+      "family": "Comparative and population genomics",
+      "name": "Genome-position allele-frequency landscape",
+      "question": "Where does microdiversity concentrate?",
+      "minimum_data": "Variant coordinates, allele frequencies and per-site coverage",
+      "design_tip": "Add gene context and flag low-confidence regions",
+      "interpretation_limit": "Mapping bias, recombination and coverage can mimic biological hotspots",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "GEN09",
+      "family": "Comparative and population genomics",
+      "name": "Sequence logo or motif alignment",
+      "question": "Which residues or bases are conserved?",
+      "minimum_data": "Aligned sequences, weights and a defined background model",
+      "design_tip": "Focus on a biologically justified region and show informative positions",
+      "interpretation_limit": "Conservation is not functional validation; uneven sampling affects letter heights",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "VIR01",
+      "family": "Viromes, hosts and mobile genetic elements",
+      "name": "Virus–host bipartite network",
+      "question": "Which hosts are supported for which viral populations?",
+      "minimum_data": "Viral IDs, host IDs, evidence types and confidence",
+      "design_tip": "Keep host and virus node sets distinct and key edge evidence",
+      "interpretation_limit": "Prediction and demonstrated infection must remain distinguishable",
+      "evidence_status": "adaptation",
+      "references": [
+        {
+          "id": "R06",
+          "locator": "Fig. 5 host-link evidence"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "VIR02",
+      "family": "Viromes, hosts and mobile genetic elements",
+      "name": "CRISPR spacer–protospacer match matrix",
+      "question": "Which spacer evidence supports candidate hosts?",
+      "minimum_data": "Spacer matches, identity/coverage thresholds and host provenance",
+      "design_tip": "Sort by host taxonomy and show evidence strength",
+      "interpretation_limit": "A spacer match may record historical contact and does not establish current infection",
+      "evidence_status": "adaptation",
+      "references": [
+        {
+          "id": "R13",
+          "locator": "Fig. 3 CRISPR-based host evidence"
+        }
+      ],
+      "priority": "specialist"
+    },
+    {
+      "id": "VIR03",
+      "family": "Viromes, hosts and mobile genetic elements",
+      "name": "Viral gene-sharing network",
+      "question": "How are unclassified viruses related by gene content?",
+      "minimum_data": "Viral proteins, homologous clusters and defined similarity edges",
+      "design_tip": "Emphasize stable modules and label reference anchors",
+      "interpretation_limit": "Network clusters are not automatically phylogenetic clades or formal taxa",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "VIR04",
+      "family": "Viromes, hosts and mobile genetic elements",
+      "name": "AMG evidence composite",
+      "question": "Does a putative viral metabolic gene have coherent evolutionary and genomic support?",
+      "minimum_data": "Gene tree, contig context, annotation support and abundance",
+      "design_tip": "Link the focal gene across a tree, genomic track and habitat panel",
+      "interpretation_limit": "Cellular contamination and uncertain annotation must be assessed before calling an AMG",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R09",
+          "locator": "Extended Data Fig. 5–7"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "VIR05",
+      "family": "Viromes, hosts and mobile genetic elements",
+      "name": "Prophage integration or mobile-element context plot",
+      "question": "Where does a mobile element sit relative to host genes?",
+      "minimum_data": "Host contig, element boundaries and supporting read/alignment evidence",
+      "design_tip": "Align boundary evidence, flanking genes and local coverage",
+      "interpretation_limit": "Uncertain boundaries and chimeric assemblies can create false integrations",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "VIR06",
+      "family": "Viromes, hosts and mobile genetic elements",
+      "name": "Host-link evidence composition plot",
+      "question": "Which host assignments rely on which evidence types?",
+      "minimum_data": "Assignment counts with a unique denominator and evidence categories",
+      "design_tip": "Include unassigned genomes and label evidence methods",
+      "interpretation_limit": "Nonexclusive evidence categories cannot be stacked as disjoint totals without a rule",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R06",
+          "locator": "Fig. 5a"
+        }
+      ],
+      "priority": "specialist"
+    },
+    {
+      "id": "NET01",
+      "family": "Ecological networks and relational structure",
+      "name": "Module-focused node–link network",
+      "question": "Which association modules organize an ecological dataset?",
+      "minimum_data": "Nodes, filtered edges, signs, weights and inference method",
+      "design_tip": "Use a fixed layout seed and clear module labels",
+      "interpretation_limit": "Co-occurrence does not prove interaction; compositional and environmental confounding matter",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R05",
+          "locator": "Fig. 3b"
+        },
+        {
+          "id": "R14",
+          "locator": "Fig. 4a"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "NET02",
+      "family": "Ecological networks and relational structure",
+      "name": "Adjacency matrix",
+      "question": "Where are dense, signed or cross-module associations?",
+      "minimum_data": "A defined adjacency matrix and node metadata",
+      "design_tip": "Order by modules and use a centered signed scale",
+      "interpretation_limit": "Make filtered, untested and zero-valued edges distinguishable",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "starter"
+    },
+    {
+      "id": "NET03",
+      "family": "Ecological networks and relational structure",
+      "name": "Chord diagram",
+      "question": "Which higher-level groups have strong many-to-many links?",
+      "minimum_data": "Aggregated links with a declared weight and denominator",
+      "design_tip": "Limit sectors and separate positive from negative associations",
+      "interpretation_limit": "Ribbons encode association totals, not material exchange; aggregation can conceal heterogeneity",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R05",
+          "locator": "Fig. 2a"
+        }
+      ],
+      "priority": "specialist"
+    },
+    {
+      "id": "NET04",
+      "family": "Ecological networks and relational structure",
+      "name": "Ego-network or focal subnetwork",
+      "question": "What connects a focal taxon, metabolite or process?",
+      "minimum_data": "Full network and explicit focal-node selection rule",
+      "design_tip": "Keep neighbours readable and summarize the surrounding context",
+      "interpretation_limit": "A visually central node is not necessarily an ecological keystone",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "NET05",
+      "family": "Ecological networks and relational structure",
+      "name": "Comparable network small multiples",
+      "question": "How do relational patterns differ across biomes or treatments?",
+      "minimum_data": "Comparable network estimates and stable node identities",
+      "design_tip": "Reuse node positions, filters and edge scaling",
+      "interpretation_limit": "Unequal sample sizes or thresholds can manufacture differences in topology",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R05",
+          "locator": "Fig. 2d–g"
+        },
+        {
+          "id": "R14",
+          "locator": "Fig. 4a"
+        }
+      ],
+      "priority": "specialist"
+    },
+    {
+      "id": "NET06",
+      "family": "Ecological networks and relational structure",
+      "name": "Network statistic versus null-model display",
+      "question": "Are connectivity or modularity patterns unusual under a stated null?",
+      "minimum_data": "Observed statistics, null ensembles and uncertainty",
+      "design_tip": "Show reference distributions alongside observed values",
+      "interpretation_limit": "A result depends on the null model; graph fit does not validate biological mechanisms",
+      "evidence_status": "adaptation",
+      "references": [
+        {
+          "id": "R14",
+          "locator": "Fig. 4b degree-distribution comparisons"
+        }
+      ],
+      "priority": "specialist"
+    },
+    {
+      "id": "FUN01",
+      "family": "Function, metabolism and biogeochemistry",
+      "name": "Pathway completeness heatmap",
+      "question": "Which genomes encode which metabolic capacities?",
+      "minimum_data": "Genome-by-pathway calls, evidence and completeness metadata",
+      "design_tip": "Group pathways by process and align genome-quality tracks",
+      "interpretation_limit": "MAG incompleteness and alternative pathway routes complicate absence calls",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "starter"
+    },
+    {
+      "id": "FUN02",
+      "family": "Function, metabolism and biogeochemistry",
+      "name": "Functional enrichment dot plot",
+      "question": "Which processes are overrepresented among selected features?",
+      "minimum_data": "Enrichment statistics, term sizes, background universe and adjusted values",
+      "design_tip": "Use dot area for a meaningful quantity and colour for one statistic",
+      "interpretation_limit": "The tested background and overlapping terms affect interpretation",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "starter"
+    },
+    {
+      "id": "FUN03",
+      "family": "Function, metabolism and biogeochemistry",
+      "name": "Enrichment similarity network",
+      "question": "Which enriched pathways share genes?",
+      "minimum_data": "Gene-set membership and a specified overlap measure",
+      "design_tip": "Collapse redundant terms and label coherent groups",
+      "interpretation_limit": "Links represent shared membership, not biochemical reactions",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "FUN04",
+      "family": "Function, metabolism and biogeochemistry",
+      "name": "Annotated biogeochemical-cycle map",
+      "question": "Which organisms may perform steps in carbon, nitrogen or sulfur cycling?",
+      "minimum_data": "Supported reactions with genes, taxa and abundance annotations",
+      "design_tip": "Use recognizable chemical species and a compact directional layout",
+      "interpretation_limit": "Genome-derived potential is not measured activity or flux",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R08",
+          "locator": "Fig. 4"
+        },
+        {
+          "id": "R09",
+          "locator": "Fig. 3a–b"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "FUN05",
+      "family": "Function, metabolism and biogeochemistry",
+      "name": "Measured-flux Sankey diagram",
+      "question": "How does quantified material move between compartments?",
+      "minimum_data": "Comparable, mass-balanced flux estimates and units",
+      "design_tip": "Make arrow width proportional to flux and show residual pools",
+      "interpretation_limit": "Gene counts and relative abundance cannot be substituted for material flux",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "FUN06",
+      "family": "Function, metabolism and biogeochemistry",
+      "name": "Reaction-level pathway map",
+      "question": "Which enzymes or metabolites differ along a pathway?",
+      "minimum_data": "Reaction graph with measurements mapped to stable identifiers",
+      "design_tip": "Use a restrained diverging scale and separate unmeasured reactions",
+      "interpretation_limit": "Distinguish annotation, expression, metabolite concentration and estimated flux",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R13",
+          "locator": "Fig. 4 and Extended Data pathway figures"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "FUN07",
+      "family": "Function, metabolism and biogeochemistry",
+      "name": "Isotope or stoichiometric relationship plot",
+      "question": "Do isotope signatures or elemental ratios distinguish processes?",
+      "minimum_data": "Measured isotope/element values, units, uncertainty and reference endmembers",
+      "design_tip": "Use clear bivariate axes or an appropriately defined ternary system",
+      "interpretation_limit": "Mixing lines and source fractions require justified endmembers and models",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "FUN08",
+      "family": "Function, metabolism and biogeochemistry",
+      "name": "Metabolic-handoff schematic",
+      "question": "Which organisms could exchange sequential metabolic products?",
+      "minimum_data": "Evidence-linked reaction capabilities and proposed exchange paths",
+      "design_tip": "Distinguish measured exchange from hypothesized links graphically",
+      "interpretation_limit": "Shared capabilities alone do not establish metabolite transfer",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R08",
+          "locator": "Fig. 6"
+        }
+      ],
+      "priority": "specialist"
+    },
+    {
+      "id": "MUL01",
+      "family": "Multi-omics integration",
+      "name": "Aligned multi-omics heatmaps",
+      "question": "Do genes, transcripts, proteins and metabolites vary together?",
+      "minimum_data": "Matched sample IDs and separately normalized omics matrices",
+      "design_tip": "Share sample order while retaining an appropriate scale for each layer",
+      "interpretation_limit": "Missing modalities and incompatible normalization can dominate apparent patterns",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "M02",
+          "locator": "Parallel heatmap examples"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "MUL02",
+      "family": "Multi-omics integration",
+      "name": "Cross-omics association matrix",
+      "question": "Which features covary across measurement layers?",
+      "minimum_data": "Matched samples and appropriately estimated associations",
+      "design_tip": "Use clear layer boundaries and controlled feature selection",
+      "interpretation_limit": "Shared batch effects and compositional closure can generate spurious links",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "MUL03",
+      "family": "Multi-omics integration",
+      "name": "Latent-factor scores and loadings",
+      "question": "Which shared axes explain variation across omics?",
+      "minimum_data": "Fitted factor scores, feature weights and variance estimates",
+      "design_tip": "Pair sample scores with compact, signed feature loadings",
+      "interpretation_limit": "Factors depend on modelling assumptions and may encode technical variation",
+      "evidence_status": "adaptation",
+      "references": [
+        {
+          "id": "M05",
+          "locator": "Factor and weight framework"
+        }
+      ],
+      "priority": "specialist"
+    },
+    {
+      "id": "MUL04",
+      "family": "Multi-omics integration",
+      "name": "Taxon–function contribution matrix",
+      "question": "Which taxa contribute to which community functions?",
+      "minimum_data": "Gene-to-taxon assignments and justified per-sample contributions",
+      "design_tip": "Align taxa and pathways and use a common quantitative scale",
+      "interpretation_limit": "Multi-mapping and unassigned functions require explicit treatment",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "starter"
+    },
+    {
+      "id": "MUL05",
+      "family": "Multi-omics integration",
+      "name": "Taxon–gene–metabolite multipartite graph",
+      "question": "Which cross-layer links support a mechanistic hypothesis?",
+      "minimum_data": "Stable cross-layer IDs and measured or evidence-qualified links",
+      "design_tip": "Use separate node columns and distinct evidence styles",
+      "interpretation_limit": "Mixed edge types cannot all be interpreted as direct biological causation",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "IMG01",
+      "family": "Microscopy, spatial ecology and single cells",
+      "name": "Multiplex fluorescence image composite",
+      "question": "Which organisms occupy the same microhabitat?",
+      "minimum_data": "Registered measured channels, taxon identities and scale calibration",
+      "design_tip": "Use readable channel colours, scale bars and enlarged detail regions",
+      "interpretation_limit": "State processing; fluorescence intensity is not automatically cell abundance",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R11",
+          "locator": "Fig. 3a and Fig. 4b–d"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "IMG02",
+      "family": "Microscopy, spatial ecology and single cells",
+      "name": "Segmented cell-identity map",
+      "question": "How are individual taxa spatially arranged?",
+      "minimum_data": "Image masks, cell labels, segmentation QC and coordinates",
+      "design_tip": "Preserve cell geometry and provide a raw-image comparison",
+      "interpretation_limit": "Segmentation and classification uncertainty affect every downstream spatial statistic",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R11",
+          "locator": "Fig. 2b–c"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "IMG03",
+      "family": "Microscopy, spatial ecology and single cells",
+      "name": "Spatial pair-correlation or distance-to-boundary plot",
+      "question": "Are cells clustered, excluded or boundary-associated?",
+      "minimum_data": "Cell positions, tissue/particle boundary and an appropriate spatial null",
+      "design_tip": "Show distance units and uncertainty alongside images",
+      "interpretation_limit": "Correct for edge effects; fields of view are nested within biological samples",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R11",
+          "locator": "Fig. 2d–e"
+        }
+      ],
+      "priority": "specialist"
+    },
+    {
+      "id": "IMG04",
+      "family": "Microscopy, spatial ecology and single cells",
+      "name": "Spatial-neighbourhood interaction matrix",
+      "question": "Which taxa are adjacent more often than expected?",
+      "minimum_data": "Cell identities, adjacency definition and spatial randomization results",
+      "design_tip": "Order taxa coherently and show signed enrichment",
+      "interpretation_limit": "Physical proximity does not establish exchange or direct interaction",
+      "evidence_status": "adaptation",
+      "references": [
+        {
+          "id": "R11",
+          "locator": "Fig. 3f spatial-network analysis"
+        }
+      ],
+      "priority": "specialist"
+    },
+    {
+      "id": "IMG05",
+      "family": "Microscopy, spatial ecology and single cells",
+      "name": "Confocal z-section or three-dimensional volume",
+      "question": "What is the actual architecture of a biofilm or aggregate?",
+      "minimum_data": "Calibrated image stack, voxel dimensions and segmentation",
+      "design_tip": "Pair a volume view with orthogonal sections and scale bars",
+      "interpretation_limit": "Occlusion and anisotropic resolution can hide structures; 3D is justified only by spatial data",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R11",
+          "locator": "Fig. 2g"
+        },
+        {
+          "id": "R05",
+          "locator": "Fig. 4b–d"
+        }
+      ],
+      "priority": "specialist"
+    },
+    {
+      "id": "IMG06",
+      "family": "Microscopy, spatial ecology and single cells",
+      "name": "Raman or NanoSIMS activity map",
+      "question": "Which cells or microregions incorporate labelled substrates?",
+      "minimum_data": "Measured spectra or ion maps, controls and spatial registration",
+      "design_tip": "Align activity signal with cell boundaries or taxon labels",
+      "interpretation_limit": "Isotope enrichment and spectral peaks need calibrated biological interpretation",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "IMG07",
+      "family": "Microscopy, spatial ecology and single cells",
+      "name": "Single-cell embedding with expression overlays",
+      "question": "Which measured cell states differ in expression?",
+      "minimum_data": "Valid cell-by-gene matrix, QC and embedding settings",
+      "design_tip": "Show selected marker overlays and stable cell annotations",
+      "interpretation_limit": "Embedding distances, cluster sizes and trajectories are not direct biological quantities",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R12",
+          "locator": "Fig. 1 t-SNE (UMAP is an additional option)"
+        }
+      ],
+      "priority": "specialist"
+    },
+    {
+      "id": "IMG08",
+      "family": "Microscopy, spatial ecology and single cells",
+      "name": "Kymograph or position–time image",
+      "question": "How do cells or activity fronts move over time?",
+      "minimum_data": "Registered time-lapse images and a defined spatial sampling path",
+      "design_tip": "Use consistent temporal sampling and a clear spatial axis",
+      "interpretation_limit": "Motion, drift and changing focus can mimic biological dynamics",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "ML01",
+      "family": "Prediction and machine-learning assessment",
+      "name": "Observed-versus-predicted scatterplot",
+      "question": "Does a model predict environmental measurements accurately?",
+      "minimum_data": "Held-out predictions, observations and split labels",
+      "design_tip": "Include the identity line and meaningful error summaries",
+      "interpretation_limit": "Training fit is not generalization; spatial or site leakage can inflate performance",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R02",
+          "locator": "Fig. 6b"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "ML02",
+      "family": "Prediction and machine-learning assessment",
+      "name": "ROC and precision–recall curves",
+      "question": "How well does a classifier separate classes?",
+      "minimum_data": "Held-out scores, labels and class prevalence",
+      "design_tip": "Pair curves with prevalence-aware baselines and uncertainty",
+      "interpretation_limit": "ROC can look strong for rare classes while precision remains poor",
+      "evidence_status": "adaptation",
+      "references": [
+        {
+          "id": "R01",
+          "locator": "Extended Data Fig. 5d verifies ROC; PR is an additional companion"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "ML03",
+      "family": "Prediction and machine-learning assessment",
+      "name": "Confusion matrix",
+      "question": "Which habitats or classes are confused?",
+      "minimum_data": "Held-out labels, predictions and class counts",
+      "design_tip": "Show raw support and clearly state normalization direction",
+      "interpretation_limit": "Row-normalized percentages can hide poorly represented classes",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R01",
+          "locator": "Extended Data Fig. 5c"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "ML04",
+      "family": "Prediction and machine-learning assessment",
+      "name": "Calibration or reliability plot",
+      "question": "Do predicted probabilities match observed frequencies?",
+      "minimum_data": "Held-out probabilities and outcomes",
+      "design_tip": "Add probability-bin support and uncertainty",
+      "interpretation_limit": "Calibration depends on prevalence and binning; discrimination and calibration differ",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "ML05",
+      "family": "Prediction and machine-learning assessment",
+      "name": "Residual diagnostic panels",
+      "question": "Where does a model systematically fail?",
+      "minimum_data": "Held-out residuals, predictions, location and covariates",
+      "design_tip": "Align residual-versus-fit, covariate and spatial views as needed",
+      "interpretation_limit": "Spatially structured residuals invalidate claims of uniformly good performance",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "starter"
+    },
+    {
+      "id": "ML06",
+      "family": "Prediction and machine-learning assessment",
+      "name": "Permutation-importance interval plot",
+      "question": "Which features support predictive performance?",
+      "minimum_data": "Repeated held-out importance estimates and a defined metric",
+      "design_tip": "Show uncertainty and group correlated predictors when justified",
+      "interpretation_limit": "Importance is model-dependent and not a causal effect; correlated predictors share signal",
+      "evidence_status": "adaptation",
+      "references": [
+        {
+          "id": "R04",
+          "locator": "Extended Data Fig. 4 verifies variable-importance encoding"
+        }
+      ],
+      "priority": "specialist"
+    },
+    {
+      "id": "ML07",
+      "family": "Prediction and machine-learning assessment",
+      "name": "SHAP beeswarm or dependence plot",
+      "question": "How does a fitted model allocate prediction contributions?",
+      "minimum_data": "Valid explanation values, input features and background specification",
+      "design_tip": "Label units, reference output and a small set of important features",
+      "interpretation_limit": "SHAP attribution is not causality and depends on assumptions about dependent features",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "ML08",
+      "family": "Prediction and machine-learning assessment",
+      "name": "Validation-stratum performance plot",
+      "question": "Does performance transfer across sites, seasons or biomes?",
+      "minimum_data": "Per-stratum held-out metrics, uncertainty and sample counts",
+      "design_tip": "Align interval estimates and expose low-support strata",
+      "interpretation_limit": "Keep tuning outside the test sets; overall performance can hide subgroup failure",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "starter"
+    },
+    {
+      "id": "ECO01",
+      "family": "Ecological assembly and mechanistic models",
+      "name": "Variation-partitioning diagram",
+      "question": "How much community variation is associated with environmental and spatial predictor sets?",
+      "minimum_data": "Appropriate fitted models and adjusted fractions",
+      "design_tip": "Use labelled fractions or aligned bars for unique and shared portions",
+      "interpretation_limit": "Shared fractions are not causal allocations; some adjusted fractions can be negative",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "ECO02",
+      "family": "Ecological assembly and mechanistic models",
+      "name": "Neutral-model occupancy–abundance plot",
+      "question": "Are taxon occurrence frequencies consistent with a fitted neutral expectation?",
+      "minimum_data": "Mean abundance, occupancy, detection assumptions and fitted intervals",
+      "design_tip": "Overlay observed taxa and the model envelope",
+      "interpretation_limit": "Departure from one neutral model does not uniquely identify a deterministic mechanism",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "ECO03",
+      "family": "Ecological assembly and mechanistic models",
+      "name": "Phylogenetic/taxonomic turnover quadrant",
+      "question": "Which sample pairs meet assembly-model classification criteria?",
+      "minimum_data": "Pairwise null-model statistics such as betaNTI and RCbray",
+      "design_tip": "Label method-specific thresholds and report pair counts",
+      "interpretation_limit": "The categories depend on the null and phylogenetic assumptions; pairs are not independent",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "ECO04",
+      "family": "Ecological assembly and mechanistic models",
+      "name": "Assembly-process contribution display",
+      "question": "How do inferred assembly classifications vary among treatments?",
+      "minimum_data": "Classified pairwise comparisons with denominators and uncertainty",
+      "design_tip": "Use aligned proportions and explicit unclassified categories",
+      "interpretation_limit": "Inferred process fractions are model classifications, not measured physical fluxes",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "ECO05",
+      "family": "Ecological assembly and mechanistic models",
+      "name": "Structural equation or path-model diagram",
+      "question": "Which hypothesized direct and indirect relationships fit the observations?",
+      "minimum_data": "A justified model, estimates, uncertainty and fit diagnostics",
+      "design_tip": "Keep paths sparse and label standardized versus raw coefficients",
+      "interpretation_limit": "Arrows express model assumptions; observational fit alone does not identify causation",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R04",
+          "locator": "Fig. 2c"
+        }
+      ],
+      "priority": "specialist"
+    },
+    {
+      "id": "ECO06",
+      "family": "Ecological assembly and mechanistic models",
+      "name": "Niche-response surface",
+      "question": "How does abundance respond to two environmental gradients jointly?",
+      "minimum_data": "Adequate two-dimensional coverage and a fitted response with uncertainty",
+      "design_tip": "Show contours plus sampled predictor combinations",
+      "interpretation_limit": "Unsupported corners of predictor space should remain visibly uncertain or masked",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "QC01",
+      "family": "Data quality, uncertainty and robustness",
+      "name": "Missingness and sampling-balance matrix",
+      "question": "Which measurements and design combinations are missing?",
+      "minimum_data": "Sample-by-variable availability and design metadata",
+      "design_tip": "Use a small categorical key and preserve design order",
+      "interpretation_limit": "Missing, below detection, ineligible and zero must be separate states",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "starter"
+    },
+    {
+      "id": "QC02",
+      "family": "Data quality, uncertainty and robustness",
+      "name": "Genome-quality trade-off scatter",
+      "question": "Which assemblies combine completeness with low contamination?",
+      "minimum_data": "Genome quality estimates, sizes and classification metadata",
+      "design_tip": "Show informative decision boundaries with readable observations",
+      "interpretation_limit": "Completeness and contamination estimates are method-dependent",
+      "evidence_status": "adaptation",
+      "references": [
+        {
+          "id": "R06",
+          "locator": "Fig. 1b quality metrics; proposed bivariate layout"
+        }
+      ],
+      "priority": "starter"
+    },
+    {
+      "id": "QC03",
+      "family": "Data quality, uncertainty and robustness",
+      "name": "Multiverse or sensitivity plot",
+      "question": "Do conclusions persist under justified analytical choices?",
+      "minimum_data": "Estimates across documented preprocessing or model alternatives",
+      "design_tip": "Group choices visibly and retain unfavorable results",
+      "interpretation_limit": "Alternatives must be scientifically defensible; this is not a search for significance",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "QC04",
+      "family": "Data quality, uncertainty and robustness",
+      "name": "Null or permutation reference distribution",
+      "question": "How unusual is an observed statistic under a stated null?",
+      "minimum_data": "Null draws, observed value and the permutation scheme",
+      "design_tip": "Mark the observed statistic and define the tested tail",
+      "interpretation_limit": "Exchanges must respect site, temporal and repeated-measures structure",
+      "evidence_status": "proposal",
+      "references": [],
+      "priority": "specialist"
+    },
+    {
+      "id": "QC05",
+      "family": "Data quality, uncertainty and robustness",
+      "name": "Sequencing or measurement control scatter",
+      "question": "Do technical controls behave as expected?",
+      "minimum_data": "Spike-ins, mock communities, blanks or species-mixing results",
+      "design_tip": "Show control identities and a meaningful expectation line",
+      "interpretation_limit": "Good technical agreement does not establish ecological representativeness",
+      "evidence_status": "direct",
+      "references": [
+        {
+          "id": "R12",
+          "locator": "Fig. 1 species-mixing validation"
+        }
+      ],
+      "priority": "starter"
+    }
+  ]
+}

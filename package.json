@@ -1,0 +1,10 @@
+{
+  "name": "microbial-visualization-atlas",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "python3 scripts/build_site.py",
+    "test": "node tests/catalogue.test.mjs",
+    "preview": "python3 -m http.server 4173 --directory dist --bind 127.0.0.1"
+  }
+}
